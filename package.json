@@ -1,0 +1,16 @@
+{
+  "name": "lawyerify-hugolify-theme",
+  "version": "1.0.0",
+  "repository": "https://github.com/sebousan/lawyerify-hugolify-theme",
+  "bugs": {
+    "url": "https://github.com/sebousan/lawyerify-hugolify-theme/issues"
+  },
+  "author": {
+    "name": "Lawyerify",
+    "url": "https://www.lawyerify.fr/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "hugolify-theme": "^1.0.6"
+  }
+}
