@@ -1,0 +1,10 @@
+{{ $context := . }}
+{{ with .Title }}
+  <header class="heading heading-filter">
+    <p class="surtitle">
+      <a href="../" class="back">{{ i18n "persons.all" }}</a>
+    </p>
+    <h1>{{ . }}</h1>
+    {{ partial "persons/filters/button" $context }}
+  </header>
+{{ end }}

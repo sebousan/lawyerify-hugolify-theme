@@ -1,0 +1,13 @@
+{{ $context := . }}
+
+{{ with .Title }}
+  {{ $page := index (last 1 (where site.Pages "Section" "offices")) 0 }}
+  <header class="heading">
+    {{ with $page }}
+      <p class="surtitle">
+        <a href="{{ .Permalink }}" class="back">{{ .Title }}</a>
+      </p>
+    {{ end }}
+    <h1>{{ . }}</h1>
+  </header>
+{{ end }}

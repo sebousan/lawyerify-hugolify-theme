@@ -1,0 +1,13 @@
+{{- with .Params.image }}
+  {{ $desktop := site.Params.offices.image.desktop | default false }}
+  {{ $mobile := site.Params.offices.image.mobile | default false }}
+  {{ partial "commons/figure.html" (dict
+    "src" .src
+    "alt" .alt
+    "credit" .credit
+    "lazy" false
+    "figure_class" "featured-image"
+    "desktop" $desktop
+    "mobile" $mobile
+  ) }}
+{{ end -}}

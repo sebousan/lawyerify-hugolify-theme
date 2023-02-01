@@ -1,0 +1,39 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": {{ .Title | plainify | safeHTML }},
+
+    {{ with .Params.image }}
+      "image": {{ . | absURL }},
+    {{ end }}
+
+    {{ with .Description }}
+      "description": {{ partial "TruncateContent" (dict "content" .) }},
+    {{ end }}
+
+    "url": {{ .Permalink }},
+
+    {{ with .Params.contact }}
+      {{ with .email }}
+        "email": {{ . | plainify | safeHTML }},
+      {{ end }}
+      {{ with .phone }}
+        "telephone": {{ . | plainify | safeHTML }},
+      {{ end }}
+      {{ with .fax }}
+        "faxNumber": {{ . | plainify | safeHTML }},
+      {{ end }}
+    {{ end }}
+
+    {{ with .Params.address }}
+      "address":{
+        "@type": "PostalAddress",
+        "addressCountry": {{ .country | plainify | safeHTML }},
+        "addressLocality": {{ .city | plainify | safeHTML }},
+        "postalCode": {{ .zipcode | plainify | safeHTML }},
+        "streetAddress": {{ .street | plainify | safeHTML }}
+      },
+    {{ end }}
+  }
+</script>

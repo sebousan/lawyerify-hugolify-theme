@@ -1,0 +1,18 @@
+{{ with .Params.address }}
+  {{ if or .street .zipcode .city .country }}
+    <address>
+      <div>
+        <p><b>{{ partial "PrepareHTML" site.Title }}</b></p>
+        {{ with .street }}
+          <p>{{ partial "PrepareHTML" . }}</p>
+        {{ end }}
+        {{  if or .zipcode .city }}
+          <p>{{ partial "PrepareHTML" .zipcode }} {{ partial "PrepareHTML" .city }}</p>
+        {{ end }}
+        {{ with .country }}
+          <p>{{ partial "PrepareHTML" . }}</p>
+        {{ end }}
+      </div>
+    </address>
+  {{ end }}
+{{ end }}

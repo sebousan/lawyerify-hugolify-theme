@@ -1,0 +1,21 @@
+{{ $pages := . }}
+{{ $scrollsnap := false }}
+{{ if reflect.IsMap . }}
+  {{ $pages = .pages }}
+  {{ with .scrollsnap }}
+    {{ $scrollsnap = true }}
+  {{ end }}
+{{ end }}
+
+{{ with $pages }}
+  {{ if gt . 0 }}
+    <div class="expertises">
+      {{ range . }}
+        <div>
+          {{ partial "expertises/item.html" . }}
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}
+  

@@ -1,0 +1,13 @@
+{{ define "hero"}}
+  {{- partial "statutes/hero" . -}}
+{{ end }}
+
+{{ define "main" }}
+  {{ partial "statutes/schema" . }}
+
+  <div class="container">
+    {{ partial "statutes/heading" . }}
+    {{ partial "statutes/filters" . }}
+    {{ partial "statutes/paginator" . }}
+  </div>
+{{ end }}

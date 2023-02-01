@@ -1,0 +1,15 @@
+{{ define "hero"}}
+  {{- partial "expertises/hero" . -}}
+{{ end }}
+
+{{ define "main" }}
+  {{ partial "expertises/schema" . }}
+
+  {{ partial "blocks/list" . }}
+  
+  <div class="container">
+    {{ partial "expertises/heading" . }}
+    {{ partial "expertises/paginator" . }}
+  </div>
+
+{{ end }}

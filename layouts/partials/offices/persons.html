@@ -1,0 +1,8 @@
+{{ $paginator := sort (.Paginator.Pages) "Params.statutes" }}
+{{ if $paginator }}
+  <section class="office-persons">
+    <h2>{{ i18n "offices.discover_persons" }}</h2>
+    {{ partial "persons/items" $paginator }}
+    {{ partial "nav/pagination.html" . }}
+  </section>
+{{ end }}

@@ -1,0 +1,27 @@
+.term-offices
+
+    .office-persons
+        @include rfs($global-spacing, margin-top)
+
+    @include media-breakpoint-up(md)
+        .grid
+            >
+                .featured-image
+                    grid-column: 1/4
+                .content
+                    grid-column: 4/9
+                .sidebar
+                    grid-column: 10/13
+                .office-persons
+                    grid-column: 1/13
+                    
+    @include media-breakpoint-down(md)
+        .grid
+            >
+                .featured-image
+                    order: 1
+                    width: 66%
+                .heading
+                    order: 2
+                .office-persons
+                    order: 5

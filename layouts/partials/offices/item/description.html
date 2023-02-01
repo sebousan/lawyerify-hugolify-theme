@@ -1,0 +1,3 @@
+{{ with .Description }}
+  <p class="description" itemprop="abstract">{{ partial "TruncateContent" (dict "content" .) }}</p>
+{{ end }}
