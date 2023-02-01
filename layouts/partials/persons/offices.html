@@ -1,0 +1,33 @@
+{{ $pages := where site.Pages "Section" "offices" }}
+{{ $pages = $pages | intersect (where site.Pages "Title" "in" .Params.offices ) }}
+
+{{ with $pages }}
+  {{ $count := . | len }}
+  {{ $desktop := site.Params.image.xsmall | default false }}
+  {{ $mobile := site.Params.image.xsmall | default false }}
+  <aside class="list list-offices">
+    <p>{{ i18n "offices.title" $count }}</p>
+    <ul>
+      {{ range . }}
+        <li>
+          {{- with .Params.image}}
+            {{ partial "commons/image.html" (dict
+              "src" .src
+              "alt" .alt
+              "desktop" $desktop
+              "mobile" $mobile
+              "picture_class" "avatar"
+              "crop" "top"
+            ) }}
+          {{ end -}}
+          <div>
+            <a href="{{ .Permalink }}">{{ partial "PrepareHTML" .Title }}</a>
+            {{ with .Params.address }}
+              <br><span>{{ partial "PrepareHTML" .city }}, {{ partial "PrepareHTML" .country }}</span>
+            {{ end }}
+          </div>
+        </li>
+      {{end}}
+    </ul>
+  </aside>
+{{ end }}

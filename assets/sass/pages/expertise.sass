@@ -1,0 +1,16 @@
+.term-expertises
+
+    .expertise-persons
+        @include rfs($global-spacing, margin-top)
+
+    @include media-breakpoint-up(md)
+        .grid
+            >
+                .expertise-persons
+                    grid-column: 1/13
+                    
+    @include media-breakpoint-down(md)
+        .grid
+            >
+                .expertise-persons
+                    order: 5

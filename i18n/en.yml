@@ -1,0 +1,42 @@
+concerned:
+  discover: Découvrir la personne concernée
+  title:
+    one: Personnes concernée
+    other: Personnes concernées
+contact: 
+  email: "Email:"
+  fax: "Fax:"
+  tel: "Phone:"
+credit:
+  lawyerify: a low impact website crafted with <a href="https://www.lawyerify.io" target="_blank">Lawyerify</a>
+expertises:
+  all: All the firm’s expertise
+  discover: Discover the expertise
+  discover_persons: Our {{ .Title }} experts
+  title:
+    one: Expertise
+    other: Expertises
+offices:
+  all: All offices
+  discover: Discover the office
+  discover_persons: The office team
+  title:
+    one: Office
+    other: Offices
+persons:
+  all: Everyone in the firm
+  discover_occupation: 
+    consonant: Discover the {{ .Occupation }}
+    vowel: Discover the {{ .Occupation }}
+publications:
+  all: All the firm's publications
+  latest_person: Latest publications by {{ .Person }}
+  list: List of publications by the person concerned
+  list_person: List of {{ .Person }}’s publications
+  more_person: Discover more publications by {{ .Person }}
+  title_person: "{{ .Person }}’s publications"
+statutes:
+  title:
+    one: Status
+    other: Statutes
+with: With {{ .Persons }}

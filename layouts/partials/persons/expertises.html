@@ -1,0 +1,34 @@
+{{ $expertises := .Params.expertises }}
+{{ $pages := where site.Pages "Section" "expertises" }}
+{{ $pages = $pages | intersect (where site.Pages "Title" "in" $expertises ) }}
+
+{{ with $pages }}
+  {{ $count := . | len }}
+  {{ $desktop := site.Params.image.xsmall | default false }}
+  {{ $mobile := site.Params.image.xsmall | default false }}
+  <aside class="list list-expertises">
+    <h2>{{ i18n "expertises.title" $count }}</h2>
+    <ul>
+      {{ range . }}
+        <li>
+          {{- with .Params.image}}
+            {{ partial "commons/image.html" (dict
+              "src" .src
+              "alt" .alt
+              "desktop" $desktop
+              "mobile" $mobile
+              "picture_class" "avatar"
+              "crop" "top"
+            ) }}
+          {{ end -}}
+          <div>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ with .Description }}
+              <br><span>{{ partial "TruncateContent" (dict "content" . "limit" 110) }}</span>
+            {{ end }}
+          </div>
+        </li>
+      {{end}}
+    </ul>
+  </aside>
+{{ end }}

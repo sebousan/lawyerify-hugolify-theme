@@ -1,0 +1,12 @@
+{{ $status := .Params.statutes }}
+{{ with site.GetPage (printf "statutes/%s" $status) }}
+  {{ $status = .Params.title_singular }}
+{{ end }}
+{{ with .Title }}
+  <header class="heading">
+    {{ with $status }}
+      <p class="surtitle">{{ . }}</p>
+    {{ end }}
+    <h1>{{ partial "PrepareHTML" . }}</h1>
+  </header>
+{{ end }}

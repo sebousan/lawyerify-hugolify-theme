@@ -1,0 +1,27 @@
+.author
+    align-items: flex-start
+    display: flex
+    flex-direction: column
+    .media
+        margin-bottom: .25rem
+        order: -1
+    .name
+        font-weight: $font-weight-bold
+        margin-bottom: .5rem 
+    .description
+        @extend .small
+        @extend .text-muted
+        margin-bottom: .5rem 
+    p:last-child
+        @extend .small
+        margin-bottom: 0
+    @if variable-exists(bootstrap-icons-map)
+        a
+            &::before
+                @include icon("arrow-right")
+                font-size: px2rem(16)
+                margin-right: .25rem
+                vertical-align: middle
+            
+
+
