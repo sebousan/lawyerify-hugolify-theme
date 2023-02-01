@@ -9,8 +9,5 @@
     "name": "Lawyerify",
     "url": "https://www.lawyerify.fr/"
   },
-  "license": "MIT",
-  "dependencies": {
-    "hugolify-theme": "^1.0.6"
-  }
+  "license": "MIT"
 }
