@@ -1,8 +1,3 @@
-concerned:
-  discover: Découvrir la personne concernée
-  title:
-    one: Personnes concernée
-    other: Personnes concernées
 contact: 
   email: "Email:"
   fax: "Fax:"
@@ -30,11 +25,6 @@ persons:
     vowel: Discover the {{ .Occupation }}
 publications:
   all: All the firm's publications
-  latest_person: Latest publications by {{ .Person }}
-  list: List of publications by the person concerned
-  list_person: List of {{ .Person }}’s publications
-  more_person: Discover more publications by {{ .Person }}
-  title_person: "{{ .Person }}’s publications"
 statutes:
   title:
     one: Status
