@@ -1,9 +1,5 @@
-contact: 
-  email: "Email:"
-  fax: "Fax:"
-  tel: "Phone:"
 credit:
-  lawyerify: a low impact website crafted with <a href="https://www.lawyerify.io" target="_blank">Lawyerify</a>
+  smfd: a low impact website crafted with <a href="https://www.lawyerify.io" target="_blank">Lawyerify</a>
 expertises:
   all: All the firm’s expertise
   discover: Discover the expertise

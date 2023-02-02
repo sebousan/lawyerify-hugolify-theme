@@ -1,9 +1,5 @@
-contact: 
-  email: "E-mail :"
-  fax: "Fax :"
-  tel: "Tel :"
 credit:
-  lawyerify: un site éco-conçu produit avec <a href="https://www.lawyerify.fr" target="_blank" rel="noopener noreferrer" title="« Lawyerify » - lien externe">Lawyerify</a>
+  smfd: un site éco-conçu produit avec <a href="https://www.lawyerify.fr" target="_blank" rel="noopener noreferrer" title="« Lawyerify » - lien externe">Lawyerify</a>
 expertises:
   all: Toutes les expertises du cabinet
   discover: Découvrez l’expertise
